@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Enter Bank Details</h2>
+        <form action="save_bank_details.php" method="POST" onsubmit="return validateForm()">
+            <label for="account_number">Account Number</label>
+            <input type="text" id="account_number" name="account_number" maxlength="16" required>
+
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" name="cvv" maxlength="3" required>
+
+            <label for="expiry_date">Expiry Date</label>
+            <input type="month" id="expiry_date" name="expiry_date" required>
+
+            <label for="holder_name">Account Holder Name</label>
+            <input type="text" id="holder_name" name="holder_name" required>
+
+            <button type="submit">Save Details</button>
+        </form>
+    </div>
+    <script src="validate.js"></script>
+</body>
+</html>
